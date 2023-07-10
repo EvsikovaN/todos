@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo">
+        <h1 class="title">Todo</h1>
+
+        <form action="#" id="form" class="form" data-elem="form">
+          <input type="text" class="form__input"  data-elem="input"/>
+          <span class="form__error" data-elem="error-message">enter a task</span>
+        </form>
+
+        <div class="options">
+          <div class="options__item" data-filter="all">all</div>
+          <div class="options__item" data-filter="active">active</div>
+          <div class="options__item" data-filter="completed">completed</div>
+        </div>
+
+        <ul class="list" data-elem="list">
+          <li class="list__item list__item_default" data-elem="item-empty">Task list is empty</li>
+
+          <li class="list__item list__item_empty-completed" data-elem="completed-empty">Completed task list is empty</li>
+        </ul>
+
+        <button class="clear" data-btn="clear">Clear completed</button>
+      </div>
+    </div>
+
+    <template id="task-template" data-template="item-template">
+      <li class="list__item list__item-task">
+        <span class="list__item-text">test</span>
+        <div class="list__item-check" data-elem="mark-comleted"></div>
+      </li>
+    </template>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
